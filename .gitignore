@@ -1,0 +1,18 @@
+# Database
+koneksi.php
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS related
+.DS_Store
+Thumbs.db
+
+# System files
+.gemini/
+.agent/
+brain/
+logs/
