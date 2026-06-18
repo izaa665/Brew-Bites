@@ -3,23 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Receipt - Brew & Bites</title>
+    <title>Receipt - Sraddha Coffee</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --primary: #d35400;
-            --primary-light: #e67e22;
-            --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            --glass: rgba(255, 255, 255, 0.85);
-            --shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            --primary: #6F4E37;
+            --primary-light: #4B3621;
+            --bg-gradient: #fafafa;
+            --glass: #ffffff;
+            --shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
         }
 
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
-            background: var(--bg-gradient);
+            background: #FAFAFA; /* Soft white background to give contrast to the white card */
             min-height: 100vh;
             color: #2d3436;
             display: flex;
@@ -62,12 +62,10 @@
 
         /* Main Card */
         .card {
-            background: var(--glass);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 30px;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(111, 78, 55, 0.1);
+            border: 1px solid #e5e7eb;
             overflow: hidden;
             position: relative;
             animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1);
@@ -103,7 +101,7 @@
         }
 
         .status-badge {
-            background: #fff5ec;
+            background: #FAF3E0;
             color: var(--primary);
             padding: 6px 14px;
             border-radius: 50px;
@@ -158,7 +156,7 @@
 
         .item-sub {
             font-size: 0.8rem;
-            color: #d35400;
+            color: #6F4E37;
             font-weight: 600;
         }
 
@@ -181,7 +179,7 @@
 
         /* Notes Box */
         .notes-box {
-            background: rgba(211, 84, 0, 0.05);
+            background: rgba(111, 78, 55, 0.05);
             border-left: 4px solid var(--primary);
             padding: 20px;
             border-radius: 12px;
@@ -253,12 +251,12 @@
         .btn-primary {
             background: var(--primary);
             color: white;
-            box-shadow: 0 10px 20px rgba(211, 84, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(111, 78, 55, 0.2);
         }
 
         .btn-primary:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(211, 84, 0, 0.3);
+            box-shadow: 0 15px 30px rgba(111, 78, 55, 0.3);
             background: var(--primary-light);
         }
 
@@ -323,20 +321,34 @@
         }
 
         @media print {
+            @page {
+                margin: 0; /* Menghilangkan header/footer browser (tanggal, url, dsb) */
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
             body {
                 background: white;
-                padding: 0;
+                padding: 20px !important;
             }
 
             .container {
-                margin: 0;
-                max-width: 100%;
+                margin: 0 auto;
+                max-width: 600px; /* Menjaga ukuran tetap proporsional di tengah kertas */
+            }
+
+            .success-animation {
+                display: none !important; /* Disembunyikan karena tidak perlu diprint di kertas struk nyata */
             }
 
             .card {
                 box-shadow: none;
-                border: 1px solid #ddd;
+                border: 1px solid #e5e7eb;
                 backdrop-filter: none;
+                border-radius: 12px;
             }
 
             .actions,
@@ -399,13 +411,13 @@
                         <span class="checkmark">✓</span>
                     </div>
                     <h1 style="font-weight: 800; margin: 0; font-size: 2.2rem; letter-spacing: -1px;">Yeay! Pesanan Terkirim</h1>
-                    <p style="color: #636e72; margin-top: 10px;">Terima kasih telah makan bersama <b>Brew & Bites</b>.</p>
+                    <p style="color: #636e72; margin-top: 10px;">Terima kasih telah makan bersama <b>Sraddha Coffee</b>.</p>
                 </div>
 
                 <div class="card">
                     <div class="inv-header">
                         <div>
-                            <div class="brand-name"><span>☕</span> Brew & Bites</div>
+                            <div class="brand-name"><span>☕</span> Sraddha Coffee</div>
                             <div class="order-id">ID: ${data.id}</div>
                             <div style="font-size: 0.8rem; color: #95a5a6; margin-top: 10px; font-weight: 500;">
                                 ${dateStr}

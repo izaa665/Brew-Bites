@@ -8,7 +8,7 @@ $query = mysqli_query($conn, "SELECT * FROM $kat");
 
 <head>
     <meta charset="UTF-8">
-    <title>Menu - Brew & Bites</title>
+    <title>Menu - Sraddha Coffee</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         body {
@@ -35,18 +35,18 @@ $query = mysqli_query($conn, "SELECT * FROM $kat");
         }
 
         .filter-btn:hover {
-            background: #fff5ec;
-            border-color: #d35400;
-            color: #d35400;
+            background: #FAF3E0;
+            border-color: #6F4E37;
+            color: #6F4E37;
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(211, 84, 0, 0.15);
+            box-shadow: 0 4px 10px rgba(111, 78, 55, 0.15);
         }
 
         .filter-btn.active {
-            background: #d35400;
+            background: #6F4E37;
             color: white;
-            border-color: #d35400;
-            box-shadow: 0 4px 15px rgba(211, 84, 0, 0.3);
+            border-color: #6F4E37;
+            box-shadow: 0 4px 15px rgba(111, 78, 55, 0.3);
         }
 
         .grid-menu {
@@ -70,7 +70,7 @@ $query = mysqli_query($conn, "SELECT * FROM $kat");
         .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            border-color: #ffe0cc;
+            border-color: #D2B48C;
         }
 
         .card-img img {
@@ -80,7 +80,7 @@ $query = mysqli_query($conn, "SELECT * FROM $kat");
         }
 
         .btn-add {
-            background: #d35400;
+            background: #6F4E37;
             color: white;
             padding: 8px 16px;
             border-radius: 8px;
@@ -95,9 +95,9 @@ $query = mysqli_query($conn, "SELECT * FROM $kat");
         }
 
         .btn-add:hover {
-            background: #e67e22;
+            background: #4B3621;
             transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(211, 84, 0, 0.25);
+            box-shadow: 0 8px 15px rgba(111, 78, 55, 0.25);
         }
 
         .btn-counter {
@@ -154,7 +154,7 @@ $query = mysqli_query($conn, "SELECT * FROM $kat");
                         ?>
                     </p>
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;">
-                        <span style="color:#d35400; font-weight:800; font-size:0.95rem;">Rp
+                        <span style="color:#6F4E37; font-weight:800; font-size:0.95rem;">Rp
                             <?= number_format($row['harga'], 0, ',', '.'); ?></span>
                         <div class="btn-action" onclick="event.stopPropagation()">
                             <div class="btn-add" onclick="upd(this, 1)">+ Tambah</div>

@@ -39,9 +39,9 @@ $orders = mysqli_query($conn, $query_orders);
         rel="stylesheet">
     <style>
         :root {
-            --primary: #d35400;
-            --primary-light: #fff5ec;
-            --blue: #d35400;
+            --primary: #6F4E37;
+            --primary-light: #e1f5fe;
+            --blue: #6F4E37;
             --bg: #f8fafc;
             --white: #ffffff;
             --text-main: #1e293b;
@@ -112,30 +112,7 @@ $orders = mysqli_query($conn, $query_orders);
             outline: none;
         }
 
-        .notify-btn {
-            width: 48px;
-            height: 48px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            position: relative;
-        }
 
-        .notify-btn::after {
-            content: '';
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            width: 8px;
-            height: 8px;
-            background: #ef4444;
-            border: 2px solid white;
-            border-radius: 50%;
-        }
 
         /* Stats Grid */
         .stats-grid {
@@ -396,7 +373,7 @@ $orders = mysqli_query($conn, $query_orders);
                     <span style="position: absolute; left: 16px; top: 12px;">🔍</span>
                     <input type="text" placeholder="Cari ID Pesanan...">
                 </div>
-                <button class="notify-btn">🔔</button>
+
             </div>
         </header>
 

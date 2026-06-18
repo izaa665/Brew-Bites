@@ -37,7 +37,7 @@ $transactions = mysqli_query($conn, $query_trx);
 
 <head>
     <meta charset="UTF-8">
-    <title>Cetak Laporan - Brew & Bites</title>
+    <title>Cetak Laporan - Sraddha Coffee</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
         rel="stylesheet">
     <style>
@@ -58,13 +58,13 @@ $transactions = mysqli_query($conn, $query_trx);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid #d35400;
+            border-bottom: 3px solid #6F4E37;
             padding-bottom: 20px;
             margin-bottom: 40px;
         }
 
         .brand h1 {
-            color: #d35400;
+            color: #6F4E37;
             font-size: 1.8rem;
             font-weight: 800;
             text-transform: uppercase;
@@ -114,7 +114,7 @@ $transactions = mysqli_query($conn, $query_trx);
         }
 
         .summary-table tr:last-child td {
-            border-bottom: 2px solid #d35400;
+            border-bottom: 2px solid #6F4E37;
         }
 
         .summary-label {
@@ -192,14 +192,14 @@ $transactions = mysqli_query($conn, $query_trx);
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #d35400;
+            background: #6F4E37;
             color: white;
             border: none;
             padding: 15px 25px;
             border-radius: 30px;
             font-weight: 800;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(211, 84, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(111, 78, 55, 0.4);
             z-index: 1000;
         }
     </style>
@@ -210,7 +210,7 @@ $transactions = mysqli_query($conn, $query_trx);
 
     <div class="header">
         <div class="brand">
-            <h1>Brew & Bites</h1>
+            <h1>Sraddha Coffee</h1>
             <p>Jalan Kopi No. 123, Indonesia</p>
         </div>
         <div class="doc-info">
@@ -219,24 +219,6 @@ $transactions = mysqli_query($conn, $query_trx);
             <p>Dicetak pada: <?= date('d M Y, H:i'); ?></p>
         </div>
     </div>
-
-    <div class="summary-table-container" style="margin-bottom: 30px;">
-        <table class="summary-table">
-            <tr>
-                <td class="summary-label">Total Penjualan</td>
-                <td class="summary-value">Rp <?= number_format($stats['total_pendapatan'] ?? 0, 0, ',', '.'); ?></td>
-            </tr>
-            <tr>
-                <td class="summary-label">Total Pesanan</td>
-                <td class="summary-value"><?= number_format($stats['total_pesanan'] ?? 0, 0, ',', '.'); ?> Pesanan</td>
-            </tr>
-            <tr>
-                <td class="summary-label">Rata-rata Transaksi</td>
-                <td class="summary-value">Rp <?= number_format($stats['rata_rata'] ?? 0, 0, ',', '.'); ?></td>
-            </tr>
-        </table>
-    </div>
-
 
     <table>
         <thead>
@@ -266,6 +248,22 @@ $transactions = mysqli_query($conn, $query_trx);
         </tbody>
     </table>
 
+    <div class="summary-table-container" style="margin-top: 30px; margin-bottom: 30px;">
+        <table class="summary-table">
+            <tr>
+                <td class="summary-label">Total Penjualan</td>
+                <td class="summary-value">Rp <?= number_format($stats['total_pendapatan'] ?? 0, 0, ',', '.'); ?></td>
+            </tr>
+            <tr>
+                <td class="summary-label">Total Pesanan</td>
+                <td class="summary-value"><?= number_format($stats['total_pesanan'] ?? 0, 0, ',', '.'); ?> Pesanan</td>
+            </tr>
+            <tr>
+                <td class="summary-label">Rata-rata Transaksi</td>
+                <td class="summary-value">Rp <?= number_format($stats['rata_rata'] ?? 0, 0, ',', '.'); ?></td>
+            </tr>
+        </table>
+    </div>
 
     <div class="footer">
         <div></div>

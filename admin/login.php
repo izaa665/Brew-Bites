@@ -41,13 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Admin - Brew & Bites</title>
+    <title>Login Admin - Sraddha Coffee</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --primary: #d35400;
-            --primary-dark: #a34100;
+            --primary: #6F4E37;
+            --primary-dark: #4B3621;
             --bg: #f8fafc;
             --white: #ffffff;
             --text-main: #1e293b;
@@ -64,7 +64,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         body {
-            background: var(--bg);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             color: var(--text-main);
             display: flex;
             align-items: center;
@@ -74,13 +78,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         .login-card {
-            background: var(--white);
+            background: rgba(255, 255, 255, 0.85); /* Glassmorphism effect */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             width: 100%;
             max-width: 400px;
             padding: 40px;
             border-radius: 24px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.6);
         }
 
         .login-header {
@@ -153,7 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         .form-group input:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(211, 84, 0, 0.1);
+            box-shadow: 0 0 0 4px rgba(111, 78, 55, 0.1);
         }
 
         .btn-login {
@@ -199,11 +205,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="login-card">
         <div class="login-header">
-            <div class="logo-box">
-                <img src="../img/logo.jpg" alt="Logo"
-                    onerror="this.src='https://ui-avatars.com/api/?name=B&B&background=d35400&color=fff'">
-            </div>
-            <h1>Admin Login</h1>
+            <h1 style="font-size: 2.5rem; font-weight: 900; letter-spacing: 2px; margin-bottom: 5px;">
+                <span style="color: #6F4E37; text-shadow: 1px 1px 0px rgba(0,0,0,0.1);">Sraddha</span>
+                <span style="color: #94a3b8;">Coffee</span>
+            </h1>
             <p>Silakan masuk ke panel pengelola</p>
         </div>
 
@@ -233,7 +238,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="login-footer">
             &copy;
-            <?= date('Y'); ?> Brew & Bites Cafe. All rights reserved.
+            <?= date('Y'); ?> Sraddha Coffee. All rights reserved.
         </div>
     </div>
 </body>

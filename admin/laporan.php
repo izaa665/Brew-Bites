@@ -42,14 +42,14 @@ $transactions = mysqli_query($conn, $query_trx);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Penjualan - Brew & Bites</title>
+    <title>Laporan Penjualan - Sraddha Coffee</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --primary: #d35400;
-            --primary-light: #fff5ec;
-            --secondary: #e67e22;
+            --primary: #6F4E37;
+            --primary-light: #e1f5fe;
+            --secondary: #4B3621;
             --bg: #f8fafc;
             --white: #ffffff;
             --text-main: #1e293b;
@@ -162,7 +162,7 @@ $transactions = mysqli_query($conn, $query_trx);
             transition: 0.3s;
             height: 52px;
             white-space: nowrap;
-            box-shadow: 0 4px 12px rgba(211, 84, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(111, 78, 55, 0.2);
         }
 
         .btn-print:hover {
@@ -407,8 +407,7 @@ $transactions = mysqli_query($conn, $query_trx);
                     <?= $filter_desc; ?>
                 </p>
             </div>
-            <button class="icon-btn"
-                style="width: 48px; height: 48px; border-radius: 12px; font-size: 1.5rem;">🔔</button>
+
         </header>
 
         <div class="filter-container">

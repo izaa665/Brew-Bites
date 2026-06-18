@@ -74,9 +74,9 @@ $admin_name = $_SESSION['admin_name'] ?? 'Admin';
     }
 
     .nav-item.active {
-        background: linear-gradient(135deg, #d35400, #e67e22);
+        background: linear-gradient(135deg, #6F4E37, #4B3621);
         color: white;
-        box-shadow: 0 4px 12px rgba(211, 84, 0, 0.25);
+        box-shadow: 0 4px 12px rgba(111, 78, 55, 0.25);
     }
 
     .nav-item i {
@@ -127,10 +127,11 @@ $admin_name = $_SESSION['admin_name'] ?? 'Admin';
 
 <aside>
     <a href="index.php" class="logo">
-        <img src="../img/logo.jpg" alt="Logo" class="logo-img"
-            onerror="this.src='https://ui-avatars.com/api/?name=B&B&background=d35400&color=fff'">
         <div>
-            <h1>Brew & Bites</h1>
+            <h1 style="font-size: 1.5rem; font-weight: 900; letter-spacing: 1px;">
+                <span style="color: #6F4E37;">Sraddha</span>
+                <span style="color: #94a3b8;">Coffee</span>
+            </h1>
             <span>Dashboard Pengelola</span>
         </div>
     </a>
@@ -139,11 +140,12 @@ $admin_name = $_SESSION['admin_name'] ?? 'Admin';
         <a href="index.php"
             class="nav-item <?= basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : '' ?>"><i>📋</i> Daftar
             Pesanan</a>
-        <a href="#" class="nav-item"><i>🍴</i> Manajemen Menu</a>
+        <a href="manajemen_menu.php"
+            class="nav-item <?= basename($_SERVER['PHP_SELF']) == 'manajemen_menu.php' ? 'active' : '' ?>"><i>🍴</i>
+            Manajemen Menu</a>
         <a href="laporan.php"
             class="nav-item <?= basename($_SERVER['PHP_SELF']) == 'laporan.php' ? 'active' : '' ?>"><i>📊</i> Laporan
             Penjualan</a>
-        <a href="#" class="nav-item"><i>⚙️</i> Pengaturan</a>
     </nav>
 
     <div class="profile-footer">

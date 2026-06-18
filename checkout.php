@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Selesaikan Pesanan - Brew & Bites</title>
+    <title>Selesaikan Pesanan - Sraddha Coffee</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
@@ -41,7 +41,7 @@
         }
 
         .breadcrumb {
-            color: #d35400;
+            color: #6F4E37;
             font-weight: 600;
             font-size: 0.9rem;
             margin-bottom: 10px;
@@ -136,12 +136,12 @@
         }
 
         .qty-btn:hover {
-            color: #d35400;
+            color: #6F4E37;
         }
 
         .item-price {
             font-weight: 700;
-            color: #d35400;
+            color: #6F4E37;
         }
 
         /* Order Options */
@@ -163,9 +163,9 @@
         }
 
         .opt-card.active {
-            border-color: #d35400;
-            background: #fff5ec;
-            color: #d35400;
+            border-color: #6F4E37;
+            background: #FAF3E0;
+            color: #6F4E37;
         }
 
         .opt-icon {
@@ -178,7 +178,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            color: #d35400;
+            color: #6F4E37;
             display: none;
         }
 
@@ -227,7 +227,7 @@
 
         .pay-tab.active {
             background: white;
-            color: #d35400;
+            color: #6F4E37;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
@@ -259,7 +259,7 @@
         }
 
         .form-control:focus {
-            border-color: #d35400;
+            border-color: #6F4E37;
             outline: none;
             background: white;
         }
@@ -290,12 +290,12 @@
         }
 
         .orange-text {
-            color: #d35400;
+            color: #6F4E37;
         }
 
         .btn-confirm {
             width: 100%;
-            background: #d35400;
+            background: #6F4E37;
             color: white;
             border: none;
             padding: 20px;
@@ -309,18 +309,18 @@
             justify-content: center;
             gap: 10px;
             align-items: center;
-            box-shadow: 0 5px 15px rgba(211, 84, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(111, 78, 55, 0.2);
         }
 
         .btn-confirm:hover {
-            background: #e67e22;
+            background: #4B3621;
             transform: translateY(-3px) scale(1.01);
-            box-shadow: 0 15px 30px rgba(211, 84, 0, 0.35);
+            box-shadow: 0 15px 30px rgba(111, 78, 55, 0.35);
         }
 
         .btn-confirm:active {
             transform: translateY(1px) scale(0.98);
-            box-shadow: 0 5px 10px rgba(211, 84, 0, 0.2);
+            box-shadow: 0 5px 10px rgba(111, 78, 55, 0.2);
         }
 
         .secure-badge {
@@ -366,7 +366,7 @@
                         <div style="font-size: 5rem; margin-bottom: 20px; opacity: 0.2">🛒</div>
                         <h2 style="color: #2d3436;">Keranjang Anda Kosong</h2>
                         <p style="color: #636e72; margin-bottom: 30px;">Silakan pilih menu favoritmu terlebih dahulu.</p>
-                        <a href="menu.php" style="background: #d35400; color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: 700;">Kembali ke Menu</a>
+                        <a href="menu.php" style="background: #6F4E37; color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: 700;">Kembali ke Menu</a>
                     </div>`;
                 return;
             }
@@ -386,7 +386,7 @@
                             <img src="${imgSrc}" class="item-img" onerror="this.src='img/default.jpg'">
                             <div>
                                 <div style="font-weight: 700; margin-bottom: 5px;">${item.nama}</div>
-                                ${item.level ? `<div style="font-size: 0.8rem; color: #d35400; font-weight: 600; margin-bottom: 5px;">${item.levelLabel}: ${item.level}</div>` : ''}
+                                ${item.level ? `<div style="font-size: 0.8rem; color: #6F4E37; font-weight: 600; margin-bottom: 5px;">${item.levelLabel}: ${item.level}</div>` : ''}
                                 <div style="font-size: 0.9rem; color: #636e72;">Rp ${item.harga.toLocaleString('id-ID')}</div>
                             </div>
                         </div>
@@ -412,7 +412,7 @@
                     <div class="breadcrumb"><a href="menu.php">Keranjang</a> / Checkout</div>
                     <div style="display:flex; justify-content:space-between; align-items:center;">
                         <h1>Selesaikan Pesanan</h1>
-                        <div style="background:#eaf2f8; color:#2980b9; padding:8px 15px; border-radius:10px; font-weight:700; border:1px solid #d4e6f1;">
+                        <div style="background:#FAF3E0; color:#6F4E37; padding:8px 15px; border-radius:10px; font-weight:700; border:1px solid #D2B48C;">
                             #${orderId}
                         </div>
                     </div>

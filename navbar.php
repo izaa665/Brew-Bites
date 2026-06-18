@@ -1,8 +1,8 @@
 <style>
     .nav-container {
         padding: 12px 0;
-        background: linear-gradient(135deg, #d35400, #e67e22);
-        box-shadow: 0 4px 20px rgba(211, 84, 0, 0.2);
+        background: linear-gradient(135deg, #6F4E37, #4B3621);
+        box-shadow: 0 4px 20px rgba(111, 78, 55, 0.2);
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -122,9 +122,10 @@
 <nav class="nav-container">
     <div class="nav-content">
         <a href="index.php" class="nav-brand">
-            <img src="img/logo.jpg" alt="Brew & Bites Logo"
-                style="height: 60px; width: 60px; object-fit: cover; border-radius: 50%; border: 2px solid rgba(255,255,255,0.8); background: white; padding: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-            <span style="font-size: 1.6rem; letter-spacing: 0.5px; margin-left: 10px;">Brew & Bites</span>
+            <span style="font-size: 1.8rem; font-weight: 900; letter-spacing: 1px;">
+                <span style="color: #ffffff;">Sraddha</span>
+                <span style="color: #E6D2B5;">Coffee</span>
+            </span>
         </a>
         <ul class="nav-links">
             <li><a href="index.php" class="nav-link">Beranda</a></li>

@@ -56,7 +56,7 @@
     .modal-close-btn:hover {
         background: #fff;
         transform: rotate(90deg) scale(1.1);
-        color: #d35400;
+        color: #6F4E37;
     }
 
     .modal-close-btn:active {
@@ -117,7 +117,7 @@
     }
 
     .thumb-item.active {
-        border-color: #d35400;
+        border-color: #6F4E37;
         transform: scale(1.05);
     }
 
@@ -130,8 +130,8 @@
     }
 
     .badge-recommend {
-        background: #fff5ec;
-        color: #d35400;
+        background: #FAF3E0;
+        color: #6F4E37;
         padding: 5px 12px;
         border-radius: 20px;
         font-weight: 800;
@@ -210,10 +210,10 @@
     }
 
     .lvl-btn.active {
-        background: #d35400;
+        background: #6F4E37;
         color: white;
-        border-color: #d35400;
-        box-shadow: 0 4px 10px rgba(211, 84, 0, 0.3);
+        border-color: #6F4E37;
+        box-shadow: 0 4px 10px rgba(111, 78, 55, 0.3);
         transform: scale(1.1);
     }
 
@@ -225,13 +225,13 @@
     }
 
     .modal-price-tag {
-        background: #d35400;
+        background: #6F4E37;
         color: white;
         padding: 12px 20px;
         border-radius: 15px;
         font-weight: 800;
         font-size: 1.2rem;
-        box-shadow: 0 8px 15px rgba(211, 84, 0, 0.3);
+        box-shadow: 0 8px 15px rgba(111, 78, 55, 0.3);
     }
 
     .modal-spec-grid {
@@ -320,7 +320,7 @@
 
     .add-to-cart-3d {
         flex: 1;
-        background: #d35400;
+        background: #6F4E37;
         color: white;
         border: none;
         height: 52px;
@@ -330,7 +330,7 @@
         cursor: pointer;
         position: relative;
         transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        box-shadow: 0 4px 12px rgba(211, 84, 0, 0.2);
+        box-shadow: 0 4px 12px rgba(111, 78, 55, 0.2);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -339,13 +339,13 @@
 
     .add-to-cart-3d:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 24px rgba(211, 84, 0, 0.4);
-        background: #e67e22;
+        box-shadow: 0 12px 24px rgba(111, 78, 55, 0.4);
+        background: #4B3621;
     }
 
     .add-to-cart-3d:active {
         transform: translateY(-1px);
-        box-shadow: 0 4px 8px rgba(211, 84, 0, 0.3);
+        box-shadow: 0 4px 8px rgba(111, 78, 55, 0.3);
     }
 
     @media (max-width: 768px) {
@@ -383,7 +383,7 @@
                 <div class="modal-title-row">
                     <div>
                         <h1 id="m-nama" style="margin:0; font-weight:800; font-size:2.2rem; color:#2d3436;"></h1>
-                        <p id="m-kat" style="color:#d35400; font-weight:700; margin:5px 0 0 0;"></p>
+                        <p id="m-kat" style="color:#6F4E37; font-weight:700; margin:5px 0 0 0;"></p>
                     </div>
                     <div id="m-price" class="modal-price-tag"></div>
                 </div>
@@ -448,7 +448,30 @@
         document.getElementById('m-price').innerText = 'Rp ' + parseInt(harga).toLocaleString('id-ID');
         document.getElementById('m-img').src = 'img/' + gambar;
         document.getElementById('m-thumb-1').src = 'img/' + gambar;
-        document.getElementById('m-kat').innerText = kat || 'Brew & Bites Special';
+        document.getElementById('m-kat').innerText = kat || 'Sraddha Coffee Special';
+
+        // Set custom thumbnails for Espresso Single
+        if (id === 'hot_drinks_1' || nama === 'Espresso Single') {
+            document.getElementById('m-thumb-1').src = 'img/espresso_single.jpg';
+            document.getElementById('m-thumb-2').src = 'img/espresso_1.jpg';
+            document.getElementById('m-thumb-3').src = 'img/espresso_2.jpg';
+        } else if (id === 'hot_drinks_2' || nama === 'Hot Cappuccino') {
+            document.getElementById('m-thumb-1').src = 'img/cappuccino_1.jpg';
+            document.getElementById('m-thumb-2').src = 'img/cappuccino_2.jpg';
+            document.getElementById('m-thumb-3').src = 'img/cappuccino_3.jpg';
+        } else if (id === 'hot_drinks_3' || nama === 'Cafe Latte') {
+            document.getElementById('m-thumb-1').src = 'img/latte_1.jpg';
+            document.getElementById('m-thumb-2').src = 'img/latte_2.jpg';
+            document.getElementById('m-thumb-3').src = 'img/latte_1.jpg';
+        } else if (id === 'hot_drinks_4' || nama === 'Americano Hot') {
+            document.getElementById('m-thumb-1').src = 'img/americano_1.jpg';
+            document.getElementById('m-thumb-2').src = 'img/americano_2.jpg';
+            document.getElementById('m-thumb-3').src = 'img/americano_3.jpg';
+        } else {
+            // Use default placeholder images for other products
+            document.getElementById('m-thumb-2').src = 'https://images.unsplash.com/photo-1512058560366-cd2427ffaa96?w=200';
+            document.getElementById('m-thumb-3').src = 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200';
+        }
 
         // Handle Dynamic Levels (Spiciness vs Sweetness vs None)
         const lvlCard = document.getElementById('m-lvl-card');

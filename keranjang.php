@@ -32,10 +32,10 @@
     }
 </style>
 <div id="cart-bar" onclick="location.href='checkout.php'"
-    style="display: none; position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); width: 85%; max-width: 420px; background: rgba(211, 84, 0, 0.9); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); color: white; padding: 16px 24px; border-radius: 24px; justify-content: space-between; align-items: center; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(211, 84, 0, 0.3); z-index: 9999; cursor: pointer; border: 1px solid rgba(255,255,255,0.2); transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
+    style="display: none; position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); width: 85%; max-width: 420px; background: rgba(111, 78, 55, 0.9); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); color: white; padding: 16px 24px; border-radius: 24px; justify-content: space-between; align-items: center; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(111, 78, 55, 0.3); z-index: 9999; cursor: pointer; border: 1px solid rgba(255,255,255,0.2); transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);">
     <div style="display: flex; align-items: center; gap: 12px;">
         <div
-            style="background: white; color: #d35400; width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            style="background: white; color: #6F4E37; width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
             <span id="t-qty">0</span>
         </div>
         <div style="display: flex; flex-direction: column;">

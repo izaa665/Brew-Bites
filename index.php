@@ -13,7 +13,7 @@ $query_rekomendasi = mysqli_query($conn, "
 
 <head>
     <meta charset="UTF-8">
-    <title>Brew & Bites - Home</title>
+    <title>Sraddha Coffee - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         body {
@@ -33,7 +33,7 @@ $query_rekomendasi = mysqli_query($conn, "
             margin-bottom: 60px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(111, 78, 55, 0.1);
         }
 
         .hero::before {
@@ -86,7 +86,7 @@ $query_rekomendasi = mysqli_query($conn, "
         .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-            border-color: #ffe0cc;
+            border-color: #D2B48C;
         }
 
         .card-img img {
@@ -96,27 +96,27 @@ $query_rekomendasi = mysqli_query($conn, "
         }
 
         .btn-add {
-            color: #d35400;
+            color: #6F4E37;
             cursor: pointer;
             font-weight: 700;
-            border: 1.5px solid #d35400;
+            border: 1.5px solid #6F4E37;
             padding: 5px 15px;
             border-radius: 8px;
             transition: all 0.2s;
         }
 
         .btn-add:hover {
-            background: #d35400;
+            background: #6F4E37;
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(211, 84, 0, 0.25);
+            box-shadow: 0 8px 15px rgba(111, 78, 55, 0.25);
         }
 
         .btn-counter {
             display: none;
             align-items: center;
             gap: 12px;
-            background: #d35400;
+            background: #6F4E37;
             color: white;
             padding: 5px 10px;
             border-radius: 8px;
@@ -132,23 +132,23 @@ $query_rekomendasi = mysqli_query($conn, "
 
         .btn-3d {
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: 0 5px 15px rgba(211, 84, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(111, 78, 55, 0.3);
         }
 
         .btn-3d:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(211, 84, 0, 0.4);
-            background: #e67e22 !important;
+            box-shadow: 0 15px 30px rgba(111, 78, 55, 0.4);
+            background: #4B3621 !important;
         }
 
         .btn-3d:active {
             transform: translateY(1px) scale(0.98);
-            box-shadow: 0 5px 10px rgba(211, 84, 0, 0.2);
+            box-shadow: 0 5px 10px rgba(111, 78, 55, 0.2);
         }
 
         /* Card 3D Buttons */
         .btn-add {
-            background: #d35400;
+            background: #6F4E37;
             color: white;
             padding: 8px 16px;
             border-radius: 8px;
@@ -163,7 +163,7 @@ $query_rekomendasi = mysqli_query($conn, "
         }
 
         .btn-add:hover {
-            background: #e67e22;
+            background: #4B3621;
         }
 
         .btn-counter {
@@ -190,13 +190,13 @@ $query_rekomendasi = mysqli_query($conn, "
         <h1>Awali Harimu dengan Kopi Terbaik</h1>
         <p>Nikmati rasa otentik dari biji kopi pilihan yang diseduh dengan hati. Pesan sekarang dan rasakan bedanya.</p>
         <a href="menu.php" class="btn-3d"
-            style="background:#d35400; color:white; padding:18px 50px; border-radius:50px; text-decoration:none; font-weight:800; display:inline-block; font-size:1.1rem;">Pesan
+            style="background:#6F4E37; color:white; padding:18px 50px; border-radius:50px; text-decoration:none; font-weight:800; display:inline-block; font-size:1.1rem;">Pesan
             Sekarang</a>
     </section>
 
     <div style="text-align: center; margin-bottom: 40px;">
         <h2 style="font-size: 2.5rem; color: #2d3436; margin-bottom: 15px;">Menu Rekomendasi</h2>
-        <div style="height: 4px; width: 60px; background: #d35400; margin: 0 auto; border-radius: 2px;"></div>
+        <div style="height: 4px; width: 60px; background: #6F4E37; margin: 0 auto; border-radius: 2px;"></div>
     </div>
 
     <div class="grid">
@@ -223,7 +223,7 @@ $query_rekomendasi = mysqli_query($conn, "
                         ?>
                     </p>
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;">
-                        <span style="color:#d35400; font-weight:800; font-size:0.95rem;">Rp
+                        <span style="color:#6F4E37; font-weight:800; font-size:0.95rem;">Rp
                             <?= number_format($row['harga'], 0, ',', '.'); ?></span>
                         <div class="btn-action" onclick="event.stopPropagation()">
                             <div class="btn-add" onclick="upd(this, 1)">+ Tambah</div>
